@@ -26,8 +26,10 @@ public class Main extends Application {
 
         Button button1=new Button();
         button1.setText("Click me");
-        button1.setOnAction(e -> AlertBox.display("Title","This is the alertBox"));
-
+        button1.setOnAction(e -> {
+                    boolean result = ConfirmBox.display("Confirm Box", "Are you sure you want to exit");
+                    System.out.println(result);
+                });
 
         StackPane layout1=new StackPane();
         layout1.getChildren().setAll( button1);
